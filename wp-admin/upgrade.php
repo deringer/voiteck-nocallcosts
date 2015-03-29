@@ -35,8 +35,6 @@ if ( 'upgrade_db' === $step ) {
 	die( '0' );
 }
 
-global $wp_version, $required_php_version, $required_mysql_version;
-
 $step = (int) $step;
 
 $php_version    = phpversion();
@@ -81,10 +79,8 @@ else
 switch ( $step ) :
 	case 0:
 		$goback = wp_get_referer();
-		if ( $goback ) {
-			$goback = esc_url_raw( $goback );
-			$goback = urlencode( $goback );
-		}
+		$goback = esc_url_raw( $goback );
+		$goback = urlencode( $goback );
 ?>
 <h2><?php _e( 'Database Update Required' ); ?></h2>
 <p><?php _e( 'WordPress has been updated! Before we send you on your way, we have to update your database to the newest version.' ); ?></p>

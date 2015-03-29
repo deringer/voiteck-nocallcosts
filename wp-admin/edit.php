@@ -18,8 +18,6 @@ if ( 'attachment' === $typenow ) {
 	}
 }
 
-global $post_type, $post_type_object;
-
 $post_type = $typenow;
 $post_type_object = get_post_type_object( $post_type );
 
@@ -234,7 +232,7 @@ if ( 'post' == $post_type ) {
 	);
 }
 
-add_screen_option( 'per_page', array( 'default' => 20, 'option' => 'edit_' . $post_type . '_per_page' ) );
+add_screen_option( 'per_page', array( 'label' => $title, 'default' => 20, 'option' => 'edit_' . $post_type . '_per_page' ) );
 
 $bulk_counts = array(
 	'updated'   => isset( $_REQUEST['updated'] )   ? absint( $_REQUEST['updated'] )   : 0,
@@ -309,7 +307,7 @@ $_SERVER['REQUEST_URI'] = remove_query_arg( array( 'locked', 'skipped', 'updated
 
 <?php $wp_list_table->views(); ?>
 
-<form id="posts-filter" method="get">
+<form id="posts-filter" action="" method="get">
 
 <?php $wp_list_table->search_box( $post_type_object->labels->search_items, 'post' ); ?>
 
