@@ -10,6 +10,7 @@
 @import url("../Divi/style.css");
 
 .contact_number {
+    color: #fff;
     float: right;
     font-size: 32px;
     font-weight: 600;
@@ -22,4 +23,15 @@
 
 #home-video {
     padding: 0;
+}
+
+#home-video h2 {
+    line-height: 40px;
+}
+
+.et_section_regular h2 {
+    line-height: 40px;
+}
+#home-video .et_pb_contact_main_title {
+    color: #fff;
 }
