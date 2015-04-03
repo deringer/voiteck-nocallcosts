@@ -9,20 +9,42 @@
 
 @import url("../Divi/style.css");
 
+#main-header {
+    padding-top: 0;
+}
+
+#logo {
+    margin-bottom: 0;
+    width: 250px;
+}
+
 .contact_number {
     color: #fff;
     float: right;
     font-size: 32px;
     font-weight: 600;
-    padding-top: 40px;
+    padding-top: 27px;
 }
 
 #home-leader {
-    padding: 50px 0 0 0;
+    padding: 10px 0 0 0;
+}
+
+#home-leader h1 {
+    font-size: 24px;
 }
 
 #home-video {
     padding: 0;
+}
+
+#home-video .et_pb_row {
+    padding-top: 0;
+}
+
+.et_pb_column_1_3 .et_pb_testimonial_portrait {
+    height: 130px;
+    width: 130px;
 }
 
 #home-video h2 {
@@ -34,4 +56,16 @@
 }
 #home-video .et_pb_contact_main_title {
     color: #fff;
+}
+
+#home-video .et_pb_contact_form_container {
+    padding-bottom: 0px;
+}
+
+.et_pb_image {
+    margin-bottom: 0px;
+}
+
+.et_pb_section {
+    padding-top: 0px;
 }
