@@ -10,6 +10,7 @@
 @import url("../Divi/style.css");
 
 #main-header {
+    box-shadow: none;
     padding-top: 0;
 }
 
@@ -55,13 +56,10 @@
     width: 160px;
 }
 
-#home-video h2 {
-    line-height: 40px;
-}
-
 .et_section_regular h2 {
     line-height: 40px;
 }
+
 #home-video .et_pb_contact_main_title {
     color: #fff;
 }
@@ -90,4 +88,8 @@
 
 #testimonials .et_pb_testimonial {
     min-height: 565px;
+}
+
+.et_pb_contact_main_title {
+    line-height: 40px;
 }
