@@ -112,7 +112,7 @@ function et_divi_load_scripts_styles(){
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
-	wp_register_script( 'google-maps-api', add_query_arg( array( 'v' => 3, 'sensor' => 'false' ), is_ssl() ? 'https://maps-api-ssl.google.com/maps/api/js' : 'http://maps.google.com/maps/api/js' ), array(), $theme_version, true );
+	wp_register_script( 'google-maps-api', esc_url( add_query_arg( array( 'v' => 3, 'sensor' => 'false' ), is_ssl() ? 'https://maps-api-ssl.google.com/maps/api/js' : 'http://maps.google.com/maps/api/js' ) ), array(), $theme_version, true );
 	wp_enqueue_script( 'divi-fitvids', $template_dir . '/js/jquery.fitvids.js', array( 'jquery' ), $theme_version, true );
 	wp_enqueue_script( 'waypoints', $template_dir . '/js/waypoints.min.js', array( 'jquery' ), $theme_version, true );
 	wp_enqueue_script( 'magnific-popup', $template_dir . '/js/jquery.magnific-popup.js', array( 'jquery' ), $theme_version, true );
@@ -3326,7 +3326,7 @@ function et_pb_get_aweber_account() {
 	$access_key = et_get_option( 'divi_aweber_access_key' );
 	$access_secret = et_get_option( 'divi_aweber_access_secret' );
 
-	if ( '' !== $consumer_key && '' !== $consumer_secret && '' !== $access_key && '' !== $access_secret ) {
+	if ( ! empty( $consumer_key ) && ! empty( $consumer_secret ) && ! empty( $access_key ) && ! empty( $access_secret ) ) {
 		try {
 			// Aweber requires curl extension to be enabled
 			if ( ! function_exists( 'curl_init' ) ) {
