@@ -143,7 +143,6 @@
 								<li <?php if ( is_home() ) echo( 'class="current_page_item"' ); ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'Divi' ); ?></a></li>
 							<?php }; ?>
 
-							<?php show_page_menu( $menuClass, false, false ); ?>
 							<?php show_categories_menu( $menuClass, false ); ?>
 						</ul>
 					<?php
